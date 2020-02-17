@@ -30,8 +30,8 @@ exec sp_tables @table_owner='dbo'
 go
 exec sp_columns Agenda;
 go
-insert into agenda (apellido, nombre, domicilio, telefono) values ('Maria','Alberto','Cruce','451287');
-insert into agenda (apellido,nombre, domicilio, telefono) values ('Nicol','Alberto','Cruce','654123');
+insert into agenda (apellido, nombre, domicilio, telefono) values ('Miguel','Gondres','Gran Parada','000000');
+insert into agenda (apellido,nombre, domicilio, telefono) values ('Miguel','Gondres','Gran Parada','88888888');
 go
 select *from Agenda
 go
@@ -77,8 +77,8 @@ go
  );
  exec sp_columns articulos;
  go
- insert into articulos (codigo, nombre, descripcion, precio,cantidad) values (4,'mouse','ingles HP',200,50);
- insert into articulos (codigo, nombre, descripcion, precio,cantidad) values (5,'monitor','español Biswal',100,50);
+ insert into articulos (codigo, nombre, descripcion, precio,cantidad) values (4,'Papel','Bond 20',200,50);
+ insert into articulos (codigo, nombre, descripcion, precio,cantidad) values (5,'Fodler','Carton',100,50);
  go
 
  select * from articulos
