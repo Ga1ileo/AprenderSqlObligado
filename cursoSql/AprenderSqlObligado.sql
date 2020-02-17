@@ -100,20 +100,20 @@ go
  create table agenda(
   apellido varchar(30),
   nombre varchar(20),
-  domicilio varchar(30),
+  domicilio varchar(MAX),
   telefono varchar(11)
  );
  go
-insert into agenda(apellido,nombre,domicilio,telefono) values('Alvarez','Alberto','Colon 123','4234567');
-insert into agenda (apellido,nombre,domicilio,telefono) values('Juarez','Juan','Avellaneda 135','4458787');
-insert into agenda (apellido,nombre,domicilio,telefono) values('Lopez','Maria','Urquiza 333','4545454');
+insert into agenda(apellido,nombre,domicilio,telefono) values('Gondres','Gondres','Gondres','000000');
+insert into agenda (apellido,nombre,domicilio,telefono) values('Gondres','Gondres','Gondres 11111','0000000');
+insert into agenda (apellido,nombre,domicilio,telefono) values('Gondres','Gondres','Gondres 11111','00000000');
 Go
 delete from agenda
-where nombre = 'Juan';
+where nombre = 'Miguel';
 select *from agenda
 go
 delete from agenda
- where telefono='4545454';
+ where telefono='00000000';
  select *from agenda
  go
  delete from agenda
@@ -121,23 +121,23 @@ delete from agenda
 
 --10 - Actualizar registros (update)
  go
-insert into agenda(apellido,nombre,domicilio,telefono) values('Alvarez','Alberto','Colon 123','4234567');
-insert into agenda (apellido,nombre,domicilio,telefono) values('Juarez','Juan','Avellaneda 135','4458787');
-insert into agenda (apellido,nombre,domicilio,telefono) values('Lopez','Maria','Urquiza 333','4545454');
+insert into agenda(apellido,nombre,domicilio,telefono) values('Gondres','Gondres','Gondres 111','000000');
+insert into agenda (apellido,nombre,domicilio,telefono) values('Gondres','Gondres','Gondres 111','000000');
+insert into agenda (apellido,nombre,domicilio,telefono) values('Gondres','Gondres','Gondres 111','0000000');
 go
 select *from agenda;
-update agenda set nombre = 'Juan Maria'
-where nombre = 'Juan';
+update agenda set nombre = 'Miguel Gondres'
+where nombre = 'Miguel';
 go
 select *from agenda
 go
-update agenda set telefono = '3831662'
-Where telefono = '4458787';
+update agenda set telefono = '000000'
+Where telefono = '00000';
 select *from agenda
 go
 
 --11 - Comentarios
-/*Comentanto ejercicios*/
+/*Comentanto ejercicio Gondress*/
 
 go
 
@@ -155,14 +155,14 @@ create table medicamentos(
 go
 exec sp_columns medicamentos
 go
-insert into medicamentos (codigo,nombre,laboratorio,precio,cantidad) values(1,'Aceptaminophen',null,null,10); 
+insert into medicamentos (codigo,nombre,laboratorio,precio,cantidad) values(1,'Jarabe',null,null,10); 
 insert into medicamentos (codigo,nombre,laboratorio,precio,cantidad) values(2,'Sertal compuesto',null,8.90,150);
 go
 insert into medicamentos (codigo,nombre, laboratorio,precio,cantidad) values(4,'Aspirinas','',0,150);
 insert into medicamentos (codigo,nombre,laboratorio,precio,cantidad) values(0,'','Bayer',15.60,0);
 select *from medicamentos
 go
-insert into medicamentos (codigo,nombre,laboratorio,precio,cantidad) values(null,'Amoxidal jarabe','Bayer',25,120);
+insert into medicamentos (codigo,nombre,laboratorio,precio,cantidad) values(null,'Gondres Gondres','Gondres',25,120);
 go
 select codigo, nombre from medicamentos
 where precio is null
@@ -198,15 +198,15 @@ if object_id('libros') is not null
   primary key(codigo)
 );
  Go
- insert into libros (codigo,titulo,autor,editorial) values (1,'El coronel','Gabriel','La pequeña');
- insert into libros (codigo,titulo,autor,editorial) values (2,'La gaviota','Jose perdero','Planeta');
+ insert into libros (codigo,titulo,autor,editorial) values (1,'Gondres Gondres','Gondres','Gondres Gondres');
+ insert into libros (codigo,titulo,autor,editorial) values (2,'Gondres Gondres','Gondres Gondres','Gondres');
  Go
- insert into libros (codigo,titulo,autor,editorial) values (2,'Alicia en el pais de las maravillas','Lewis Carroll','Planeta');
+ insert into libros (codigo,titulo,autor,editorial) values (2,'Gondres Gondres','mike Gondres','Gondres');
  Go
- insert into libros (codigo,titulo,autor,editorial) values (null,'Alicia en el pais de las maravillas','Lewis Carroll','Planeta');
+ insert into libros (codigo,titulo,autor,editorial) values (null,'Gondres Gondres','mike Gondres Gondres','Gondres Gondres');
  Go
  update libros set codigo=1
-  where titulo='El coronel';
+  where titulo=' Gondres';
 select *from libros
 Go
 
